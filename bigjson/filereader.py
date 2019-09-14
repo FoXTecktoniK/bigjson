@@ -104,7 +104,7 @@ class FileReader:
                         string += u'\t'
                     elif c == u'u':
                         unicode_bytes = self._read(4)
-                        string += ('\\u' + unicode_bytes).encode('ascii').decode('unicode_escape')
+                        string += ('\\u' + unicode_bytes).encode('utf-8').decode('unicode_escape')
                     else:
                         raise Exception(u'Unexpected {} in backslash encoding!'.format(c))
 
